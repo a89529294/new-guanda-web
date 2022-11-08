@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 
 import "../styles/globals.css";
 
-const notoSansTC = Noto_Sans_TC({ weight: "400" });
+const notoSansTC = Noto_Sans_TC({ weight: ["400", "700"], subsets: ["chinese-traditional"] });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

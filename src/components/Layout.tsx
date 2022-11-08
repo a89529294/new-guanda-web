@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import cx from "classix";
 
 import logo from "src/assets/logo_small.png";
@@ -20,13 +20,16 @@ const side_paths: LinkProp[] = [
 ];
 
 function Layout({ children, className }: { children: ReactNode; className?: string }) {
+  const [showMenu, toggleMenu] = useState(false);
+
   return (
     <div className={cx("relative", className)}>
-      <nav className="fixed z-10 flex w-full bg-aswad-black">
-        <div className="w-56 py-3 pl-14">
+      <nav className="fixed z-10 flex w-full items-center bg-aswad-black sm:justify-between sm:bg-aswad-black/60 sm:px-3">
+        <div className="w-56 py-3 pl-14 sm:pl-0">
           <Image src={logo} alt="logo" />
         </div>
-        <div className="relative flex-1 bg-white/30 pr-10 [clip-path:polygon(95px_0,100%_0,100%_100%,0_100%)]">
+        {/* desktop nav */}
+        <div className="relative flex-1 bg-white/30 pr-10 [clip-path:polygon(95px_0,100%_0,100%_100%,0_100%)] sm:hidden">
           <div className="absolute inset-0 left-[1px] flex bg-[#101010] pr-10 pl-32 pt-8 [clip-path:polygon(95px_0,100%_0,100%_100%,0_100%)]">
             <ul className="flex gap-11 ">
               {main_paths.map((page, i) => (
@@ -40,6 +43,52 @@ function Layout({ children, className }: { children: ReactNode; className?: stri
             </ul>
           </div>
         </div>
+        {/* mobile burger */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          className="h-6 w-6 stroke-white"
+          onClick={() => toggleMenu(true)}>
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+        {/* mobile menu */}
+        {showMenu && (
+          <div className="fixed inset-0 bg-zinc-700/50" onClick={() => toggleMenu(false)}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              className="absolute top-5 right-5 h-6 w-6 stroke-black">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+
+            <div
+              className="ml-auto flex h-full w-3/5 flex-col bg-white p-10"
+              onClick={(e) => e.stopPropagation()}>
+              <ul className="grid gap-5">
+                {main_paths.map((page, i) => (
+                  <li key={i}>
+                    <Link href={page.path}>{page.label}</Link>
+                  </li>
+                ))}
+              </ul>
+              <ul className="mt-auto grid gap-5">
+                {side_paths.map((page, i) => (
+                  <li key={i} className="last:text-gray-500">
+                    <Link href={page.path}>{page.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
       </nav>
       {children}
     </div>

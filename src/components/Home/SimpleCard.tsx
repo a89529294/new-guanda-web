@@ -6,7 +6,7 @@ import arrow from "src/assets/arrow.svg";
 
 function SimpleCard({ title, sub, path }: { title: string; sub: string; path: string }) {
   return (
-    <div className="w-[375px] text-white">
+    <div className="w-[375px] text-white sm:w-full">
       <h2 className="text-4xl font-bold">{title}</h2>
       <p className="mt-3 mb-14">{sub}</p>
       <Link

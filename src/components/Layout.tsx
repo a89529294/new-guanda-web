@@ -24,19 +24,19 @@ function Layout({ children, className }: { children: ReactNode; className?: stri
 
   return (
     <div className={cx("relative", className)}>
-      <nav className="fixed z-10 flex w-full items-center bg-aswad-black sm:justify-between sm:bg-aswad-black/60 sm:px-3">
+      <nav className="fixed z-10 flex w-full bg-aswad-black sm:justify-between sm:bg-aswad-black/60 sm:px-3">
         <div className="w-56 py-3 pl-14 sm:pl-0">
           <Image src={logo} alt="logo" />
         </div>
         {/* desktop nav */}
         <div className="relative flex-1 bg-white/30 pr-10 [clip-path:polygon(95px_0,100%_0,100%_100%,0_100%)] sm:hidden">
           <div className="absolute inset-0 left-[1px] flex bg-[#101010] pr-10 pl-32 pt-8 [clip-path:polygon(95px_0,100%_0,100%_100%,0_100%)]">
-            <ul className="flex gap-11 ">
+            <ul className="flex gap-11 xl:gap-6">
               {main_paths.map((page, i) => (
                 <MyLink page={page} key={i} />
               ))}
             </ul>
-            <ul className="ml-auto flex gap-5">
+            <ul className="ml-auto flex gap-5 xl:gap-3 lg:hidden">
               {side_paths.map((page, i) => (
                 <MyLink page={page} key={i} className="last:text-[#909090]" />
               ))}
@@ -49,7 +49,7 @@ function Layout({ children, className }: { children: ReactNode; className?: stri
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
-          className="h-6 w-6 stroke-white"
+          className="hidden h-6 w-6 stroke-white sm:block"
           onClick={() => toggleMenu(true)}>
           <path
             strokeLinecap="round"
@@ -59,7 +59,9 @@ function Layout({ children, className }: { children: ReactNode; className?: stri
         </svg>
         {/* mobile menu */}
         {showMenu && (
-          <div className="fixed inset-0 bg-zinc-700/50" onClick={() => toggleMenu(false)}>
+          <div
+            className="fixed inset-0 hidden bg-zinc-700/50 sm:block"
+            onClick={() => toggleMenu(false)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

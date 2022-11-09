@@ -4,29 +4,37 @@ import React, { ReactNode, useState } from "react";
 import cx from "classix";
 
 import logo from "src/assets/logo_small.png";
+import Footer from "./Footer";
+import { useRouter } from "next/router";
 
 type LinkProp = { label: string; path: string };
 
 const main_paths: LinkProp[] = [
-  { label: "公司簡介", path: "/" },
-  { label: "GD-STD", path: "/" },
-  { label: "自動化產線", path: "/" },
-  { label: "ERP軟體", path: "/" },
-  { label: "QRcode鐵牌", path: "/" },
+  { label: "公司簡介", path: "/about-us" },
+  { label: "GD-STD", path: "/gd-std" },
+  { label: "自動化產線", path: "/automation" },
+  { label: "ERP軟體", path: "/erp-software" },
+  { label: "QRcode鐵牌", path: "/qrcode-metal-plate" },
 ];
 const side_paths: LinkProp[] = [
-  { label: "聯絡我們", path: "/" },
-  { label: "企業登入", path: "/" },
+  { label: "聯絡我們", path: "/contact-us" },
+  { label: "企業登入", path: "/temp-change-later" },
 ];
 
 function Layout({ children, className }: { children: ReactNode; className?: string }) {
+  const router = useRouter();
   const [showMenu, toggleMenu] = useState(false);
 
   return (
     <div className={cx("relative", className)}>
-      <nav className="sm: fixed z-10 flex w-full bg-aswad-black sm:items-center sm:justify-between sm:bg-mobile-nav sm:px-10">
+      <nav className="fixed z-10 flex w-full bg-aswad-black sm:items-center sm:justify-between sm:bg-mobile-nav sm:px-10">
         <div className="w-56 py-3 pl-14 sm:pl-0">
-          <Image src={logo} alt="logo" className="sm:w-20" />
+          <Image
+            src={logo}
+            alt="logo"
+            className="cursor-pointer sm:w-20"
+            onClick={() => router.push("/")}
+          />
         </div>
         {/* desktop nav */}
         <div className="relative flex-1 bg-white/30 pr-10 [clip-path:polygon(95px_0,100%_0,100%_100%,0_100%)] sm:hidden">
@@ -98,12 +106,19 @@ function Layout({ children, className }: { children: ReactNode; className?: stri
 }
 
 function MyLink({ className, page }: { className?: string; page: LinkProp }) {
+  const router = useRouter();
+
   return (
     <li className={cx("flex flex-col text-white", className)}>
       <Link href={page.path} className="peer">
         {page.label}
       </Link>
-      <span className="mt-auto bg-[#2AFD58] peer-hover:h-[3px]" />
+      <span
+        className={cx(
+          "mt-auto bg-[#2AFD58] peer-hover:h-[3px]",
+          page.path === router.pathname && "h-[3px]"
+        )}
+      />
     </li>
   );
 }

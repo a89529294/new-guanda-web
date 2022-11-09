@@ -1,8 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* --mobile-nav-dark: rgb(24 26 29 / 0.6);
-  --mobile-nav-light: rgb(203 213 225 / 0.6); */
+
+@layer components {
+  .before-red-circle {
+    @apply before:absolute before:-bottom-[0.5px] before:block before:h-[3px] before:w-[3px] before:translate-y-1/2 before:bg-light-red;
+  }
+
+  .after-red-circle {
+    @apply after:absolute after:-bottom-[0.5px] after:right-0 after:block after:h-[3px] after:w-[3px] after:translate-y-1/2 after:bg-light-red;
+  }
+}
+
 :root {
   --mobile-nav: rgb(24 26 29 / 0.6);
 }

@@ -24,9 +24,9 @@ function Layout({ children, className }: { children: ReactNode; className?: stri
 
   return (
     <div className={cx("relative", className)}>
-      <nav className="fixed z-10 flex w-full bg-aswad-black sm:items-center sm:justify-between sm:bg-aswad-black/60 sm:px-10">
+      <nav className="sm: fixed z-10 flex w-full bg-aswad-black sm:items-center sm:justify-between sm:bg-mobile-nav sm:px-10">
         <div className="w-56 py-3 pl-14 sm:pl-0">
-          <Image src={logo} alt="logo" />
+          <Image src={logo} alt="logo" className="sm:w-20" />
         </div>
         {/* desktop nav */}
         <div className="relative flex-1 bg-white/30 pr-10 [clip-path:polygon(95px_0,100%_0,100%_100%,0_100%)] sm:hidden">

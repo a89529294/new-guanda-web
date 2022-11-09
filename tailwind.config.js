@@ -9,6 +9,7 @@ module.exports = {
         "logo-red": "#C7000B",
         "light-red": "#FF1414",
         "aswad-black": "#181A1D",
+        "mobile-nav": "var(--mobile-nav)",
       },
     },
     screens: {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { RefObject } from "react";
 import Image from "next/image";
 
 import Screen from "./Screen";
@@ -9,11 +9,13 @@ import circleGdErp from "src/assets/circle-gd-erp.svg";
 import circleQr from "src/assets/circle-qr.svg";
 import erp from "src/assets/index-erp-hd.png";
 
-function ScreenFour() {
+function ScreenFour({ myRef }: { myRef?: RefObject<HTMLDivElement> }) {
   /* pt-[74px] takes nav height into account */
 
   return (
-    <Screen className="relative isolate grid place-content-center gap-14 bg-aswad-black pt-[74px] sm:flex sm:flex-col sm:px-10">
+    <Screen
+      className="relative isolate grid place-content-center gap-14 bg-aswad-black pt-[74px] sm:flex sm:flex-col"
+      myRef={myRef}>
       <div className="absolute inset-0 -z-10 bg-black [clip-path:polygon(0_0,300px_0,100%_75%,100%_100%,0_100%)] sm:[clip-path:none]" />
       {/* erp image plus card container */}
       <div className="flex gap-14 sm:flex-col">

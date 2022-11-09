@@ -11,6 +11,18 @@ module.exports = {
         "aswad-black": "#181A1D",
         "mobile-nav": "var(--mobile-nav)",
       },
+      height: (theme) => ({
+        auto: "auto",
+        ...theme("spacing"),
+        full: "100%",
+        screen: "calc(var(--vh) * 100)",
+      }),
+      minHeight: (theme) => ({
+        0: "0",
+        ...theme("spacing"),
+        full: "100%",
+        screen: "calc(var(--vh) * 100)",
+      }),
     },
     screens: {
       xl: { max: "1279px" },

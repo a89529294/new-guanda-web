@@ -14,7 +14,7 @@ function ScreenFour({ myRef }: { myRef?: RefObject<HTMLDivElement> }) {
 
   return (
     <Screen
-      className="relative isolate grid place-content-center gap-14 bg-aswad-black pt-[74px] sm:flex sm:flex-col"
+      className="relative isolate grid place-content-center gap-14 bg-aswad-black pt-[74px] sm:flex sm:flex-col "
       myRef={myRef}>
       <div className="absolute inset-0 -z-10 bg-black [clip-path:polygon(0_0,300px_0,100%_75%,100%_100%,0_100%)] sm:[clip-path:none]" />
       {/* erp image plus card container */}

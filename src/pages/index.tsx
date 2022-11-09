@@ -6,37 +6,24 @@ import ScreenFive from "src/components/Home/ScreenFive";
 import { useEffect, useRef } from "react";
 
 export default function Home() {
-  const ref1 = useRef<HTMLDivElement>(null);
-  const ref2 = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const target1 = ref1.current;
-    // const target2 = ref2.current;
-    if (!target1) return;
-
+    const target = ref.current;
     let root = document.documentElement;
-    let temp = { screen4: false, screen5: false };
-    let callback = (entries: any[], observer: any) => {
+    if (!target) return;
+
+    let callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         console.log(entry.isIntersecting);
         if (!entry.isIntersecting) root.style.setProperty("--mobile-nav", "rgb(24 26 29 / 0.6)");
         else root.style.setProperty("--mobile-nav", "rgb(203 213 225 / 0.6)");
-
-        // Each entry describes an intersection change for one observed
-        // target element:
-        //   entry.boundingClientRect
-        //   entry.intersectionRatio
-        //   entry.intersectionRect
-        //   entry.isIntersecting
-        //   entry.rootBounds
-        //   entry.target
-        //   entry.time
       });
     };
 
     let observer = new IntersectionObserver(callback, { threshold: 0.45 });
-    observer.observe(target1);
-    // observer.observe(target2);
+    observer.observe(target);
+
     return () => observer.disconnect();
   }, []);
 
@@ -45,7 +32,8 @@ export default function Home() {
       <ScreenOne />
       <ScreenTwo />
       <ScreenThree />
-      <div ref={ref1}>
+      {/* 60px is the height of the footer, need this to fix scroll snap bug on mobile */}
+      <div ref={ref} className="sm:pb-[60px]">
         <ScreenFour />
         <ScreenFive />
       </div>

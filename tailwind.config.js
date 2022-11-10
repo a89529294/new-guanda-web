@@ -9,7 +9,9 @@ module.exports = {
         "logo-red": "#C7000B",
         "light-red": "#FF1414",
         "aswad-black": "#181A1D",
+        "chaos-black": "#101010",
         "mobile-nav": "var(--mobile-nav)",
+        "light-gray": "#C8C5C5",
       },
       height: (theme) => ({
         auto: "auto",

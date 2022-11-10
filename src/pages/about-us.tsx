@@ -8,18 +8,18 @@ import tm3 from "src/assets/about-us/trademark3.jpg";
 import tm4 from "src/assets/about-us/trademark4.jpg";
 import tm5 from "src/assets/about-us/trademark5.jpg";
 import Footer from "src/components/Footer";
+import BackgroundTriangles from "src/components/BackgroundTriangles";
+import UnderscoredText from "src/components/UnderscoredText";
 
+// TODO add the background logos
 function aboutUs() {
   return (
     //326 is the width of the big logo image
     <div className="relative isolate grid grid-cols-[calc((100%-326px)/2)_auto_auto_188px] gap-y-28 bg-aswad-black pt-44 pb-32">
-      <div className="absolute inset-0 -z-10 bg-black [clip-path:polygon(0_0,35%_0,100%_360px,100%_0,100%_100%,calc(100%-400px)_100%,0_calc(100%-400px))]" />
-
+      <BackgroundTriangles />
       <Image src={logoAboutUs} alt="logo" width={326} className="col-start-2" />
       <div className="col-span-2 col-start-2 row-start-2 grid gap-10 text-lg text-white">
-        <h1 className="before-red-circle after-red-circle relative justify-self-start border-b border-light-red pb-3 text-2xl">
-          以創意♥︎科技，打造綠色E世界
-        </h1>
+        <UnderscoredText>以創意♥︎科技，打造綠色E世界</UnderscoredText>
         <p>
           廣達國際機械是為了解決鋼構加工需求而存在的。
           廣是「廣思集益」意味著透過團隊經由反覆討論而得出滿足客戶需求的最佳方案，過程就像是廣收各方意見，再萃取出智慧。

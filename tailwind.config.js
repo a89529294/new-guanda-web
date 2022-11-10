@@ -12,6 +12,7 @@ module.exports = {
         "chaos-black": "#101010",
         "mobile-nav": "var(--mobile-nav)",
         "light-gray": "#C8C5C5",
+        "cerebral-gray": "#CCC",
       },
       height: (theme) => ({
         auto: "auto",

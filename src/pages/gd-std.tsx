@@ -19,6 +19,7 @@ import Advantages from "src/components/gd-std/Advantages";
 import Patents from "src/components/gd-std/Patents";
 import Footer from "src/components/Footer";
 
+// TODO add background logos
 function Gdtsd() {
   return (
     <div className="relative isolate bg-aswad-black pt-40 pb-36">

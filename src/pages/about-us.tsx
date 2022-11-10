@@ -18,7 +18,7 @@ function aboutUs() {
     <div className="relative isolate grid grid-cols-[calc((100%-326px)/2)_auto_auto_188px] gap-y-28 bg-aswad-black pt-44 pb-32">
       <BackgroundTriangles />
       <Image src={logoAboutUs} alt="logo" width={326} className="col-start-2" />
-      <div className="col-span-2 col-start-2 row-start-2 grid gap-10 text-lg text-white">
+      <div className="col-span-2 col-start-2 row-start-2 grid justify-items-start gap-10 text-lg text-white">
         <UnderscoredText>以創意♥︎科技，打造綠色E世界</UnderscoredText>
         <p>
           廣達國際機械是為了解決鋼構加工需求而存在的。

@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import Screen from "./Screen";
 import SimpleCard from "./SimpleCard";
+import RedCircle from "../RedCircle";
 
 import circleApp from "src/assets/circle-app.svg";
 import circleGdErp from "src/assets/circle-gd-erp.svg";
@@ -35,15 +36,6 @@ function ScreenFour({ myRef }: { myRef?: RefObject<HTMLDivElement> }) {
         <RedCircle image={circleQr} label="QR鐵牌" />
       </div>
     </Screen>
-  );
-}
-
-function RedCircle({ image, label }: { image: any; label: string }) {
-  return (
-    <div className="grid justify-items-center gap-2.5">
-      <Image src={image} alt="app" />
-      <h2 className="text-xl text-white">{label}</h2>
-    </div>
   );
 }
 

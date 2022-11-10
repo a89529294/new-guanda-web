@@ -13,6 +13,7 @@ module.exports = {
         "mobile-nav": "var(--mobile-nav)",
         "light-gray": "#C8C5C5",
         "cerebral-gray": "#CCC",
+        tin: "#909090",
       },
       height: (theme) => ({
         auto: "auto",

@@ -16,10 +16,7 @@ const main_paths: LinkProp[] = [
   { label: "ERP軟體", path: "/erp-software" },
   { label: "QRcode鐵牌", path: "/qrcode-metal-plate" },
 ];
-const side_paths: LinkProp[] = [
-  { label: "聯絡我們", path: "/contact-us" },
-  { label: "企業登入", path: "/temp-change-later" },
-];
+const side_paths: LinkProp[] = [{ label: "聯絡我們", path: "/contact-us" }];
 
 function Layout({ children, className }: { children: ReactNode; className?: string }) {
   const router = useRouter();
@@ -48,6 +45,7 @@ function Layout({ children, className }: { children: ReactNode; className?: stri
               {side_paths.map((page, i) => (
                 <MyLink page={page} key={i} className="last:text-[#909090]" />
               ))}
+              <li className="text-gray-500">企業登入</li>
             </ul>
           </div>
         </div>
@@ -91,7 +89,7 @@ function Layout({ children, className }: { children: ReactNode; className?: stri
               </ul>
               <ul className="mt-auto grid gap-5">
                 {side_paths.map((page, i) => (
-                  <li key={i} className="last:text-gray-500">
+                  <li key={i}>
                     <Link href={page.path}>{page.label}</Link>
                   </li>
                 ))}

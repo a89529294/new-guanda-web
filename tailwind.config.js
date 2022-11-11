@@ -10,10 +10,13 @@ module.exports = {
         "light-red": "#FF1414",
         "aswad-black": "#181A1D",
         "chaos-black": "#101010",
+        "matt-black": "#151515",
         "mobile-nav": "var(--mobile-nav)",
         "light-gray": "#C8C5C5",
         "cerebral-gray": "#CCC",
         "bright-light-green": "#2AFD58",
+        button: "rgba(67,66,66,0.7)",
+        "button-hover": "rgba(113,111,111,0.7)",
         tin: "#909090",
       },
       height: (theme) => ({

@@ -3,6 +3,7 @@ import React from "react";
 
 import ImageWithCard from "src/components/gd-std/ImageWithCard";
 
+// import hero from "src/assets/automation/automation-hero.webp";
 import hero from "src/assets/automation/automation-hero.webp";
 import alt1 from "src/assets/automation/alt1.jpg";
 import alt2 from "src/assets/automation/alt2.jpg";

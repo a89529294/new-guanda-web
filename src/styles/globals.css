@@ -10,10 +10,32 @@
   .after-red-circle {
     @apply after:absolute after:-bottom-[0.5px] after:right-0 after:block after:h-[3px] after:w-[3px] after:translate-y-1/2 after:bg-light-red;
   }
+
+  .before-white-square {
+    @apply before:absolute before:-left-3 before:top-1/2 before:block before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:bg-white;
+  }
+
+  .after-white-square {
+    @apply after:absolute after:-right-3 after:top-1/2 after:block after:h-1.5 after:w-1.5 after:-translate-y-1/2 after:bg-white;
+  }
 }
 
 :root {
   --mobile-nav: rgb(24 26 29 / 0.6);
+}
+
+html,
+body {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
 }
 
 .no-scrollbar {

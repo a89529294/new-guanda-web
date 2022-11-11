@@ -13,6 +13,7 @@ module.exports = {
         "mobile-nav": "var(--mobile-nav)",
         "light-gray": "#C8C5C5",
         "cerebral-gray": "#CCC",
+        "bright-light-green": "#2AFD58",
         tin: "#909090",
       },
       height: (theme) => ({

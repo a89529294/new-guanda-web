@@ -6,27 +6,26 @@ import GreenCircle from "src/components/GreenCircle";
 import UnderscoredText from "src/components/UnderscoredText";
 import Functionalities from "src/components/erp-software/Functionalities";
 import LinkButton from "src/components/LinkButton";
+import SandwitchedText from "src/components/SandwitchedText";
+import Footer from "src/components/Footer";
 
 import circleApp from "src/assets/circle-app.svg";
 import circleGdErp from "src/assets/circle-gd-erp.svg";
 import circleQr from "src/assets/circle-qr.svg";
-import bltr from "src/assets/erp-software/green-arrows-bl-tr.svg";
-import tlbr from "src/assets/erp-software/green-arrows-tl-br.svg";
-import hr from "src/assets/erp-software/green-arrows-hr.svg";
+import bltr from "src/assets/erp-software/white-arrows-bl-tr.svg";
+import tlbr from "src/assets/erp-software/white-arrows-tl-br.svg";
+import hr from "src/assets/erp-software/white-arrows-hr.svg";
 import func1 from "src/assets/erp-software/app-func-1.webp";
 import func2 from "src/assets/erp-software/app-func-2.webp";
 import func3 from "src/assets/erp-software/app-func-3.webp";
 import func4 from "src/assets/erp-software/app-func-4.webp";
 import func5 from "src/assets/erp-software/app-func-5.webp";
 import func6 from "src/assets/erp-software/app-func-6.webp";
-import SandwitchedText from "src/components/SandwitchedText";
-import Footer from "src/components/Footer";
 
 function ErpSoftware() {
   return (
     <div className="relative isolate grid gap-32 bg-aswad-black pt-44 pb-32">
       <BackgroundTriangle />
-
       <div className="grid justify-items-center gap-14 justify-self-center text-white">
         <UnderscoredText>鋼結構導入大數據、人員數據化！</UnderscoredText>
         <div className="grid grid-cols-3 place-items-center gap-x-16">
@@ -46,7 +45,6 @@ function ErpSoftware() {
           <GreenCircle image={circleQr} label="QR鐵牌" bold />
         </div>
       </div>
-
       <div className="grid grid-cols-[62.5%_37.5%] items-start">
         <Functionalities />
         <div className="grid gap-7 px-20 pt-40 text-white">
@@ -56,7 +54,6 @@ function ErpSoftware() {
           <LinkButton label="立即諮詢" path="/" />
         </div>
       </div>
-
       <div className="grid gap-14">
         <div className="justify-self-center text-white">
           <UnderscoredText>GD-ERP手機App功能</UnderscoredText>
@@ -72,7 +69,6 @@ function ErpSoftware() {
           ))}
         </ul>
       </div>
-
       <Footer />
     </div>
   );

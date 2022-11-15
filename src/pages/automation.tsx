@@ -1,20 +1,23 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 
-import ImageWithCard from "src/components/gd-std/ImageWithCard";
+import ImageWithCard from "src/components/automation/ImageWithCard";
 
-// import hero from "src/assets/automation/automation-hero.webp";
-import hero from "src/assets/automation/automation-hero.webp";
 import alt1 from "src/assets/automation/alt1.jpg";
 import alt2 from "src/assets/automation/alt2.jpg";
+import hero from "src/assets/automation/automation-hero.webp";
 import ImageSwitcher from "src/components/automation/ImageSwitcher";
 import Footer from "src/components/Footer";
 
-function automation() {
+function Automation() {
   return (
-    // 60 is the height of the footer
-    <div className="bg-black pb-[60px]">
-      <Image src={hero} alt="hero" className="mx-auto w-4/5 pt-20 pb-24" />
+    <div className="bg-black pb-[var(--footer-height)] sm:pb-0">
+      <Image
+        src={hero}
+        alt="hero"
+        className="mx-auto w-4/5 pt-20 pb-24 sm:w-full sm:pt-4 sm:pb-10"
+        priority
+      />
       <ImageWithCard
         img={alt1}
         title="雙向送料手臂"
@@ -35,4 +38,4 @@ function automation() {
   );
 }
 
-export default automation;
+export default Automation;

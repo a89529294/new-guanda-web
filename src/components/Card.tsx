@@ -1,8 +1,8 @@
 import React from "react";
 import cx from "classix";
 
-import UnderscoredText from "../UnderscoredText";
-import LinkButton from "../LinkButton";
+import UnderscoredText from "./UnderscoredText";
+import LinkButton from "./LinkButton";
 
 function Card({
   title,

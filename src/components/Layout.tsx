@@ -7,8 +7,18 @@ import { useRouter } from "next/router";
 import logo from "src/assets/logo_small.png";
 import work from "src/assets/work.svg";
 import location from "src/assets/location.svg";
-import { invalid_routes, LinkProp, main_routes, side_routes } from "src/routes";
-import classix from "classix";
+
+export type LinkProp = { label: string; path: string };
+
+export const main_routes: LinkProp[] = [
+  { label: "公司簡介", path: "/about-us" },
+  { label: "GD-STD", path: "/gd-std" },
+  { label: "自動化產線", path: "/automation" },
+  { label: "ERP軟體", path: "/erp-software" },
+  { label: "QRcode鐵牌", path: "/qrcode-metal-plate" },
+];
+export const side_routes: LinkProp[] = [{ label: "聯絡我們", path: "/contact-us" }];
+export const invalid_routes = [{ label: "企業登入" }];
 
 function Layout({ children, className }: { children: ReactNode; className?: string }) {
   const router = useRouter();
@@ -66,7 +76,7 @@ function Layout({ children, className }: { children: ReactNode; className?: stri
 
         {/* mobile menu */}
         <div
-          className={classix(
+          className={cx(
             "absolute top-full -z-10 hidden h-screen-minus-nav w-full flex-col bg-black/[0.93] px-6 py-6 transition-transform duration-200 sm:flex",
             showMenu ? "translate-x-0" : "translate-x-full"
           )}>

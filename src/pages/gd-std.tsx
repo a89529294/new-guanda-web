@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 import BackgroundTriangles from "src/components/BackgroundTriangles";
-import Card from "src/components/gd-std/Card";
+import Card from "src/components/Card";
 import BorderedImageWithDesc from "src/components/gd-std/BorderedImageWithDesc";
 import ImageWithCard from "src/components/gd-std/ImageWithCard";
 
@@ -24,14 +24,11 @@ function Gdtsd() {
   return (
     <div className="relative isolate bg-aswad-black pt-40 pb-36 sm:bg-black sm:px-8 sm:pt-14 sm:pb-8">
       <BackgroundTriangles />
-
       <Image src={hero} alt="machine" priority className="mx-auto w-2/5 sm:w-3/5" />
-
       <div className="mb-12 mt-16 flex gap-6 px-10 sm:my-9 sm:flex-col sm:px-0">
         <Image src={heroSub1} alt="" />
         <Image src={heroSub2} alt="" />
       </div>
-
       <Card
         title="左右軸換刀裝置"
         sub="左右側主軸的刀具都搭配全新雙向各4個定位換刀系統，可以容納各式各樣的刀具 種類(可以搭配手機APP使用)。"
@@ -39,7 +36,6 @@ function Gdtsd() {
         size="fixed"
         className="mx-auto mb-40"
       />
-
       <ImageWithCard
         img={alt1}
         title="上軸換刀裝置"
@@ -61,7 +57,6 @@ function Gdtsd() {
         path="/"
         imgPos="left"
       />
-
       <div className="mx-auto mt-28 mb-44 flex w-fit gap-16 text-white sm:mt-0 sm:mb-32 sm:flex-col sm:gap-24">
         <BorderedImageWithDesc
           img={bordered1}
@@ -75,16 +70,12 @@ function Gdtsd() {
           className="mt-28 sm:mt-0"
         />
       </div>
-
       <div className="ml-32 mr-48 flex items-start gap-28 sm:m-0 sm:flex-col sm:gap-2">
         <Image src={hero} alt="" className="w-64 flex-1 self-end sm:flex-initial" />
         <Spec />
       </div>
-
       <Advantages />
-
       <Patents />
-
       <Footer />
     </div>
   );

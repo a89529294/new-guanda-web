@@ -6,7 +6,7 @@ import ScreenFive from "src/components/Home/ScreenFive";
 
 export default function Home() {
   return (
-    <div className="no-scrollbar max-h-screen-minus-nav snap-y snap-mandatory">
+    <div className="no-scrollbar max-h-screen-minus-nav snap-y snap-mandatory overflow-y-scroll">
       <ScreenOne />
       <ScreenTwo />
       <ScreenThree />

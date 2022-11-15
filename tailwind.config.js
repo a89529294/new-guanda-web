@@ -26,6 +26,8 @@ module.exports = {
         screen: "calc(var(--vh) * 100)",
         nav: "var(--nav-height)",
         "screen-minus-nav": "calc(100 * var(--vh) - var(--nav-height))",
+        "screen-minus-nav-footer":
+          "calc(100 * var(--vh) - var(--nav-height) - var(--footer-height))",
       },
       minHeight: { screen: "calc(var(--vh) * 100)" },
       maxHeight: {
@@ -34,6 +36,7 @@ module.exports = {
       },
       spacing: {
         18: "4.5rem",
+        4.5: "1.125rem",
       },
       fontFamily: {
         sans: ["Noto Sans TC", ...defaultTheme.fontFamily.sans],

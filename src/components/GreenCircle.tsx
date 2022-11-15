@@ -13,10 +13,16 @@ export default function GreenCircle({
   bold?: boolean;
 }) {
   return (
-    <div className="grid justify-items-center gap-2.5">
+    <div className="grid justify-items-center gap-2.5 sm:relative">
       <Image src={image} alt="app" className="sm:w-32" />
-      {label ? <h2 className={cx("text-xl text-white", bold && "font-bold")}>{label}</h2> : null}
-      {subLabel ? <h3 className="-mt-2 text-[15px] text-tin">{subLabel}</h3> : null}
+      {label ? (
+        <h2 className={cx("text-xl text-white sm:text-base", bold && "font-bold")}>{label}</h2>
+      ) : null}
+      {subLabel ? (
+        <h3 className="-mt-2 text-[15px] text-tin sm:absolute sm:-bottom-4 sm:text-xs">
+          {subLabel}
+        </h3>
+      ) : null}
     </div>
   );
 }

@@ -24,44 +24,46 @@ import func6 from "src/assets/erp-software/app-func-6.webp";
 
 function ErpSoftware() {
   return (
-    <div className="relative isolate grid gap-32 bg-aswad-black pt-44 pb-32">
+    <div className="relative isolate grid gap-32 bg-aswad-black pt-44 pb-32 sm:bg-black sm:p-0">
       <BackgroundTriangle />
-      <div className="grid justify-items-center gap-14 justify-self-center text-white">
-        <UnderscoredText>鋼結構導入大數據、人員數據化！</UnderscoredText>
-        <div className="grid grid-cols-3 place-items-center gap-x-16">
+      <div className="grid justify-items-center gap-14 justify-self-center text-white sm:px-7 sm:pt-12 sm:pb-18">
+        <UnderscoredText size="sm">鋼結構導入大數據、人員數據化！</UnderscoredText>
+        <div className="grid grid-cols-3 place-items-center gap-x-16 sm:gap-x-7">
           <Image
             src={bltr}
             alt="decoration"
-            className="relative left-1/2 top-1/2 translate-x-1/4 -translate-y-1/2"
+            className="relative left-1/2 top-1/2 translate-x-1/4 -translate-y-1/2 sm:w-9"
           />
           <GreenCircle image={circleGdErp} label="GD-ERP" subLabel="辦公室軟體" bold />
           <Image
             src={tlbr}
             alt="decoration"
-            className="relative right-1/2 top-1/2 -translate-x-1/4 -translate-y-1/2"
+            className="relative right-1/2 top-1/2 -translate-x-1/4 -translate-y-1/2 sm:w-9"
           />
           <GreenCircle image={circleApp} label="手機App" bold />
-          <Image src={hr} alt="decoration" />
+          <Image src={hr} alt="decoration" className="sm:w-7" />
           <GreenCircle image={circleQr} label="QR鐵牌" bold />
         </div>
       </div>
-      <div className="grid grid-cols-[62.5%_37.5%] items-start">
+      <div className="grid grid-cols-[62.5%_37.5%] items-start sm:grid-cols-1 sm:bg-chaos-black">
         <Functionalities />
-        <div className="grid gap-7 px-20 pt-40 text-white">
+        <div className="grid gap-7 px-20 pt-40 text-white sm:px-8 sm:pt-14">
           <p className="text-lg">
             由Tekla的BOM報表，匯入GD-ERP軟體再搭配廣達機械研發的QR鐵牌及手機App(掃描軟體)，可以讓使用者清楚掌管專案與人員進度管理。
           </p>
           <LinkButton label="立即諮詢" path="/" />
         </div>
       </div>
-      <div className="grid gap-14">
+      <div className="grid gap-14 sm:pb-10">
         <div className="justify-self-center text-white">
           <UnderscoredText>GD-ERP手機App功能</UnderscoredText>
           <h3 className="mt-2 text-center text-light-gray">- iPAD也適用 -</h3>
         </div>
-        <ul className="flex gap-10 px-12">
+        <ul className="no-scrollbar flex gap-10 px-12 sm:overflow-x-scroll">
           {cellphoneFunctions.map((func, i) => (
-            <li key={i} className="flex flex-col items-center text-center text-white">
+            <li
+              key={i}
+              className="flex flex-col items-center text-center text-white sm:w-48 sm:shrink-0">
               <Image src={func.img} alt="" className="mb-5" />
               <SandwitchedText>{func.title}</SandwitchedText>
               {typeof func.desc === "string" ? <p className="mt-3">{func.desc}</p> : <func.desc />}

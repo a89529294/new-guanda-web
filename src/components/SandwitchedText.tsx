@@ -9,7 +9,7 @@ function SandwitchedText({
   fontSize?: "lg" | "md";
 }) {
   const fontSizes = {
-    lg: "text-[41px]",
+    lg: "text-[41px] sm:text-2xl",
     md: "text-2xl",
   };
   return (

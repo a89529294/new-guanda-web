@@ -6,7 +6,7 @@ import cx from "classix";
 
 function QRCodePlate({ size = "md", className }: { size?: "lg" | "md"; className?: string }) {
   const sizes = {
-    lg: "w-[600px]",
+    lg: "w-[600px] sm:w-60",
     md: "w-80 sm:w-60",
   };
   return (

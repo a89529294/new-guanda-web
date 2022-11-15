@@ -30,7 +30,7 @@ function QRCodeMetalPlate() {
         <h3 className="before-white-square after-white-square relative mx-auto mt-20 mb-5 w-fit text-3xl font-bold text-white sm:mt-11 sm:text-xl">
           鋼構構件的標記方法
         </h3>
-        <article className="mb-24 grid gap-4 border-y sm:gap-0 sm:border-0">
+        <article className="mb-24 grid gap-4 border-y sm:mb-0 sm:gap-0 sm:border-0">
           {/* 構件標記的重要性（一） ROW ONE DESKTOP*/}
           <div className="flex gap-4 sm:hidden">
             <div className="relative flex-1 sm:hidden">

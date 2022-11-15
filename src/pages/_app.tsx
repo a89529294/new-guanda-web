@@ -1,11 +1,10 @@
 import type { AppProps } from "next/app";
-import { Noto_Sans_TC } from "@next/font/google";
+import Head from "next/head";
+import { useEffect } from "react";
+
 import Layout from "../components/Layout";
 
 import "../styles/globals.css";
-import { useEffect } from "react";
-
-const notoSansTC = Noto_Sans_TC({ weight: ["400", "700"], subsets: ["chinese-traditional"] });
 
 function calculateViewHeight() {
   let vh = window.innerHeight * 0.01;
@@ -20,7 +19,10 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <Layout className={notoSansTC.className}>
+    <Layout>
+      <Head>
+        <title>廣達國際機械</title>
+      </Head>
       <Component {...pageProps} />
     </Layout>
   );

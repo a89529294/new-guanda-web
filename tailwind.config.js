@@ -35,6 +35,9 @@ module.exports = {
       spacing: {
         18: "4.5rem",
       },
+      fontFamily: {
+        sans: ["Noto Sans TC", ...defaultTheme.fontFamily.sans],
+      },
     },
     screens: {
       xl: { max: "1279px" },

@@ -22,12 +22,12 @@ import Footer from "src/components/Footer";
 // TODO add background logos
 function Gdtsd() {
   return (
-    <div className="relative isolate bg-aswad-black pt-40 pb-36">
+    <div className="relative isolate bg-aswad-black pt-40 pb-36 sm:bg-black sm:px-8 sm:pt-14 sm:pb-8">
       <BackgroundTriangles />
 
-      <Image src={hero} alt="machine" priority className="mx-auto w-2/5" />
+      <Image src={hero} alt="machine" priority className="mx-auto w-2/5 sm:w-3/5" />
 
-      <div className="mb-12 mt-16 flex gap-6 px-10">
+      <div className="mb-12 mt-16 flex gap-6 px-10 sm:my-9 sm:flex-col sm:px-0">
         <Image src={heroSub1} alt="" />
         <Image src={heroSub2} alt="" />
       </div>
@@ -62,7 +62,7 @@ function Gdtsd() {
         imgPos="left"
       />
 
-      <div className="mx-auto mt-28 mb-44 flex w-fit gap-16 text-white">
+      <div className="mx-auto mt-28 mb-44 flex w-fit gap-16 text-white sm:mt-0 sm:mb-32 sm:flex-col sm:gap-24">
         <BorderedImageWithDesc
           img={bordered1}
           title="MQL油霧切削潤滑系統"
@@ -72,12 +72,12 @@ function Gdtsd() {
           img={bordered2}
           title="硬質合金鑽孔"
           desc="憑藉高轉速,可實現主軸硬質合金 刀具的最大效率。"
-          className="mt-28"
+          className="mt-28 sm:mt-0"
         />
       </div>
 
-      <div className="ml-32 mr-48 flex items-start gap-28">
-        <Image src={hero} alt="" className="flex-1" />
+      <div className="ml-32 mr-48 flex items-start gap-28 sm:m-0 sm:flex-col sm:gap-2">
+        <Image src={hero} alt="" className="w-64 flex-1 self-end sm:flex-initial" />
         <Spec />
       </div>
 

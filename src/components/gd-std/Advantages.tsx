@@ -2,7 +2,7 @@ import React from "react";
 
 function Advantages() {
   return (
-    <div className="bg-chaos-black py-16">
+    <div className="bg-chaos-black py-16 sm:-mx-8 sm:px-8">
       <div className="mx-auto mb-3 w-fit">
         <div className="before-red-circle after-red-circle relative" />
         <h2 className="border-t border-b border-light-red pb-1 pt-0.5 text-[41px] font-bold leading-tight text-white">
@@ -10,11 +10,11 @@ function Advantages() {
         </h2>
         <div className="before-red-circle after-red-circle relative -translate-y-[1px]" />
       </div>
-      <h2 className="mb-12 text-center text-4xl font-bold text-white">11項優勢</h2>
-      <ul className="mx-auto grid w-fit grid-flow-col grid-cols-[auto_auto] grid-rows-6 gap-y-5 gap-x-36">
+      <h2 className="mb-12 text-center text-4xl font-bold text-white sm:text-3xl">11項優勢</h2>
+      <ul className="mx-auto grid w-fit grid-flow-col grid-cols-[auto_auto] grid-rows-6 gap-y-5 gap-x-36 sm:grid-flow-row sm:grid-cols-1 sm:grid-rows-none sm:gap-0">
         {advantages.map(([key, value], i) => (
-          <li key={i} className="flex items-start gap-5">
-            <span className="grid aspect-square w-8 place-items-center rounded-full bg-logo-red text-xl text-white">
+          <li key={i} className="flex items-start gap-5 sm:h-24">
+            <span className="grid aspect-square w-8 place-items-center rounded-full bg-logo-red text-xl text-white sm:shrink-0">
               {i + 1}
             </span>
             <div>

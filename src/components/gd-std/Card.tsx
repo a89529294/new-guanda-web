@@ -1,9 +1,6 @@
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-
-import arrow from "src/assets/arrow.svg";
 import cx from "classix";
+
 import UnderscoredText from "../UnderscoredText";
 import LinkButton from "../LinkButton";
 

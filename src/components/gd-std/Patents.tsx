@@ -10,17 +10,17 @@ import UnderscoredText from "../UnderscoredText";
 
 function Patents() {
   return (
-    <section className="grid gap-16 px-20 pt-40">
-      <div className="grid grid-cols-2 gap-x-6 gap-y-16">
-        {patents.map((patent, i) => (
-          <div
-            key={i}
-            className="flex flex-col items-center gap-4 text-white last:translate-x-[calc(50%+12px)]">
-            <UnderscoredText>{patent.title}</UnderscoredText>
-            <Image src={patent.img} alt="patent" />
-          </div>
-        ))}
-      </div>
+    <section className="grid grid-cols-2 gap-x-6 gap-y-16 px-20 pt-40 sm:grid-cols-1 sm:px-0 sm:pt-18">
+      {patents.map((patent, i) => (
+        <div
+          key={i}
+          className="flex flex-col items-center gap-4 text-white last:translate-x-[calc(50%+12px)] sm:last:translate-x-0">
+          <UnderscoredText size="sm" className="sm:self-center">
+            {patent.title}
+          </UnderscoredText>
+          <Image src={patent.img} alt="patent" className="sm:self-stretch" />
+        </div>
+      ))}
     </section>
   );
 }

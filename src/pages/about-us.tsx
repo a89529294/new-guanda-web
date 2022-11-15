@@ -16,7 +16,7 @@ function aboutUs() {
   return (
     //320 is the width of the big logo image
     <div className="relative isolate grid grid-cols-[calc((100%-320px)/2)_auto_auto_188px] gap-y-28 bg-aswad-black pt-44 pb-32 sm:grid-cols-1 sm:justify-items-center sm:gap-10 sm:bg-black sm:px-8 sm:pt-16 sm:pb-12">
-      <BackgroundTriangles className="sm:hidden" />
+      <BackgroundTriangles />
       <Image src={logoAboutUs} alt="logo" className="col-start-2 w-80 sm:col-start-1 sm:w-52" />
       <div className="col-span-2 col-start-2 row-start-2 grid justify-items-start gap-10 text-white sm:col-span-1 sm:col-start-1">
         <UnderscoredText>

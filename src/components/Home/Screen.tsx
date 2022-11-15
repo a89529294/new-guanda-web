@@ -11,7 +11,7 @@ function Screen({
   myRef?: RefObject<HTMLDivElement>;
 }) {
   return (
-    <div className={cx("h-screen snap-start sm:px-10", className)} ref={myRef}>
+    <div className={cx("h-screen-minus-nav snap-start ", className)} ref={myRef}>
       {children}
     </div>
   );

@@ -5,7 +5,7 @@ import Card from "./Card";
 
 function ScreenThree() {
   return (
-    <Screen className="relative bg-[url('/assets/index-bg-3.jpg')] bg-cover bg-top">
+    <Screen className="relative bg-[url('/assets/index-bg-3.jpg')] bg-cover bg-top sm:bg-[url('/assets/index-bg-mobile-2.jpg')] sm:bg-bottom">
       <Card title="自動化產線" sub="自動化產線搭配APP操作，實現便利科技。" path="/" />
     </Screen>
   );

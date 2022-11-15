@@ -10,9 +10,9 @@ import cx from "classix";
 
 function Footer() {
   return (
-    <div className="absolute bottom-0 flex w-full items-center  bg-aswad-black py-3 pl-14 pr-10 text-white sm:-ml-10 sm:justify-start sm:gap-3 sm:border-t sm:border-white/50 sm:pl-10 sm:pr-0">
-      <Image src={logoCN} alt="logo" width={160} className="sm:hidden" />
-      <Image src={logo} alt="logo" className="hidden sm:block" />
+    <div className="absolute bottom-0 flex w-full items-center  bg-aswad-black py-3 pl-14 pr-10 text-white sm:hidden">
+      <Image src={logoCN} alt="logo" width={160} className="" />
+      <Image src={logo} alt="logo" className="hidden" />
       <nav className="ml-auto flex gap-14">
         <NavItem label="工作機會" image={work} hideOnMobile />
         <NavItem label="聯絡我們" image={phone} hideOnMobile />
@@ -32,7 +32,7 @@ function NavItem({
   hideOnMobile?: boolean;
 }) {
   return (
-    <div className={cx("flex gap-1.5 sm:text-sm", hideOnMobile && "sm:hidden")}>
+    <div className={cx("flex gap-1.5 ", hideOnMobile && "")}>
       <Image src={image} alt="decoration" className="h-full w-auto" />
       <h3 className="whitespace-nowrap">{label}</h3>
     </div>

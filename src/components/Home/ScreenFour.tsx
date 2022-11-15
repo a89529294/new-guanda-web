@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Screen from "./Screen";
 import SimpleCard from "./SimpleCard";
-import RedCircle from "../RedCircle";
+import GreenCircle from "../GreenCircle";
 
 import circleApp from "src/assets/circle-app.svg";
 import circleGdErp from "src/assets/circle-gd-erp.svg";
@@ -11,30 +11,46 @@ import circleQr from "src/assets/circle-qr.svg";
 import erp from "src/assets/index-erp-hd.png";
 
 function ScreenFour({ myRef }: { myRef?: RefObject<HTMLDivElement> }) {
-  /* pt-[74px] takes nav height into account */
-
   return (
     <Screen
-      className="relative isolate grid place-content-center gap-14 bg-aswad-black pt-[74px] sm:flex sm:flex-col "
+      className="relative isolate grid place-content-center gap-14 bg-aswad-black sm:flex sm:flex-col sm:justify-between sm:gap-0 sm:bg-black sm:px-10 sm:pb-8"
       myRef={myRef}>
-      <div className="absolute inset-0 -z-10 bg-black [clip-path:polygon(0_0,300px_0,100%_75%,100%_100%,0_100%)] sm:[clip-path:none]" />
+      <div className="absolute inset-0 -z-10 bg-black [clip-path:polygon(0_0,300px_0,100%_75%,100%_100%,0_100%)] sm:hidden" />
       {/* erp image plus card container */}
-      <div className="flex gap-14 sm:flex-col">
-        <Image src={erp} alt="erp" className="w-[740px] sm:w-full" />
+      <div className="flex gap-14 sm:-mx-10">
+        <Image src={erp} alt="erp" className="w-[740px] " />
         <SimpleCard
           title="ERP軟體"
           sub="清晰的專案管理，搭配手機掃描軟體，輕鬆掌握各人員進度。"
           path="/"
+          className="sm:hidden"
         />
       </div>
-      {/* three red circles */}
-      <div className="flex items-center gap-10 justify-self-center">
-        <RedCircle image={circleApp} label="手機App" />
+
+      {/* desktop three green circles */}
+      <div className="flex items-center gap-10 justify-self-center sm:hidden">
+        <GreenCircle image={circleApp} label="手機App" />
         <TripleDots />
-        <RedCircle image={circleGdErp} label="GD-ERP" />
+        <GreenCircle image={circleGdErp} label="GD-ERP" />
         <TripleDots />
-        <RedCircle image={circleQr} label="QR鐵牌" />
+        <GreenCircle image={circleQr} label="QR鐵牌" />
       </div>
+
+      {/* mobile three green circles */}
+      <div className="hidden items-center justify-self-center sm:grid">
+        <GreenCircle image={circleApp} />
+        <div className="flex justify-between">
+          <GreenCircle image={circleGdErp} />
+          <GreenCircle image={circleQr} />
+        </div>
+      </div>
+
+      <SimpleCard
+        title="ERP軟體"
+        sub="清晰的專案管理，搭配手機掃描軟體，輕鬆掌握各人員進度。"
+        path="/"
+        className="hidden sm:block"
+      />
     </Screen>
   );
 }
@@ -42,7 +58,7 @@ function ScreenFour({ myRef }: { myRef?: RefObject<HTMLDivElement> }) {
 function TripleDots() {
   return (
     // -translate-y-[19px] takes into account of (gap between circle and label plus label height)/2
-    <div className="flex -translate-y-[19px] gap-4 sm:hidden">
+    <div className="flex -translate-y-[19px] gap-4 ">
       <div className="h-[7px] w-[7px] rounded-full bg-white" />
       <div className="h-[7px] w-[7px] rounded-full bg-white" />
       <div className="h-[7px] w-[7px] rounded-full bg-white" />

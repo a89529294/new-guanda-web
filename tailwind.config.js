@@ -14,23 +14,26 @@ module.exports = {
         "mobile-nav": "var(--mobile-nav)",
         "light-gray": "#C8C5C5",
         "cerebral-gray": "#CCC",
+        tin: "#909090",
+        "shadow-mountain": "#585858",
+        "light-green": "#00FF38",
         "bright-light-green": "#2AFD58",
         button: "rgba(67,66,66,0.7)",
         "button-hover": "rgba(113,111,111,0.7)",
-        tin: "#909090",
       },
-      height: (theme) => ({
-        auto: "auto",
-        ...theme("spacing"),
-        full: "100%",
+      height: {
         screen: "calc(var(--vh) * 100)",
-      }),
-      minHeight: (theme) => ({
-        0: "0",
-        ...theme("spacing"),
-        full: "100%",
+        nav: "var(--nav-height)",
+        "screen-minus-nav": "calc(100 * var(--vh) - var(--nav-height))",
+      },
+      minHeight: { screen: "calc(var(--vh) * 100)" },
+      maxHeight: {
         screen: "calc(var(--vh) * 100)",
-      }),
+        "screen-minus-nav": "calc(100 * var(--vh) - var(--nav-height))",
+      },
+      spacing: {
+        18: "4.5rem",
+      },
     },
     screens: {
       xl: { max: "1279px" },

@@ -4,13 +4,13 @@ import Screen from "./Screen";
 
 function ScreenOne() {
   return (
-    <Screen className="relative bg-[url('/assets/index-bg-1.jpg')] bg-cover bg-left-bottom sm:bg-[60%_0%]">
-      <div className="absolute bottom-11 flex gap-4 text-4xl font-bold text-white before:block  before:h-10 before:w-12 before:border-r-[3px] before:bg-logo-red sm:text-center sm:text-5xl sm:leading-normal sm:before:hidden">
-        <span className="hidden sm:block">
-          以創意♥︎科技 <br />
-          打造綠色E世界
+    <Screen className="relative bg-[url('/assets/index-bg-1.jpg')] bg-cover bg-left-bottom sm:bg-[url('/assets/index-bg-mobile-1.jpg')] sm:bg-right-top">
+      <div className="absolute bottom-11 flex gap-4  font-bold  before:block  before:h-10 before:w-12 before:border-r-[3px] before:bg-logo-red ">
+        <span className="text-4xl text-white sm:text-3xl sm:leading-normal">
+          以創意<span className="text-light-red">♥︎</span>科技，
+          <br className="hidden sm:block" />
+          打造綠色<span className="text-light-green">E</span>世界
         </span>
-        <span className="sm:hidden">以創意♥︎科技，打造綠色E世界</span>
       </div>
     </Screen>
   );

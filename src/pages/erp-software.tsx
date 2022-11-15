@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import BackgroundTriangle from "src/components/BackgroundTriangle";
-import RedCircle from "src/components/RedCircle";
+import GreenCircle from "src/components/GreenCircle";
 import UnderscoredText from "src/components/UnderscoredText";
 import Functionalities from "src/components/erp-software/Functionalities";
 import LinkButton from "src/components/LinkButton";
@@ -35,15 +35,15 @@ function ErpSoftware() {
             alt="decoration"
             className="relative left-1/2 top-1/2 translate-x-1/4 -translate-y-1/2"
           />
-          <RedCircle image={circleGdErp} label="GD-ERP" subLabel="辦公室軟體" bold />
+          <GreenCircle image={circleGdErp} label="GD-ERP" subLabel="辦公室軟體" bold />
           <Image
             src={tlbr}
             alt="decoration"
             className="relative right-1/2 top-1/2 -translate-x-1/4 -translate-y-1/2"
           />
-          <RedCircle image={circleApp} label="手機App" bold />
+          <GreenCircle image={circleApp} label="手機App" bold />
           <Image src={hr} alt="decoration" />
-          <RedCircle image={circleQr} label="QR鐵牌" bold />
+          <GreenCircle image={circleQr} label="QR鐵牌" bold />
         </div>
       </div>
 

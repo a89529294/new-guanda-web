@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import cx from "classix";
 import { useRouter } from "next/router";
 
@@ -13,6 +13,10 @@ import classix from "classix";
 function Layout({ children, className }: { children: ReactNode; className?: string }) {
   const router = useRouter();
   const [showMenu, toggleMenu] = useState(false);
+
+  useEffect(() => {
+    toggleMenu(false);
+  }, [router]);
 
   return (
     <div className={cx("relative pt-[var(--nav-height)]", className)}>
@@ -31,12 +35,12 @@ function Layout({ children, className }: { children: ReactNode; className?: stri
             <div className="absolute inset-0 left-[1px] flex bg-[#101010] pr-10 pl-32 pt-8 [clip-path:polygon(95px_0,100%_0,100%_100%,0_100%)]">
               <ul className="flex gap-11 xl:gap-6 sm:hidden">
                 {main_routes.map((route, i) => (
-                  <MyLink route={route} key={i} />
+                  <DesktopLink route={route} key={i} />
                 ))}
               </ul>
               <ul className="ml-auto flex gap-5 xl:gap-3 lg:hidden">
                 {side_routes.map((route, i) => (
-                  <MyLink route={route} key={i} className="last:text-[#909090]" />
+                  <DesktopLink route={route} key={i} className="last:text-[#909090]" />
                 ))}
                 {invalid_routes.map((route, i) => (
                   <li className="text-gray-500" key={i}>
@@ -64,19 +68,15 @@ function Layout({ children, className }: { children: ReactNode; className?: stri
         <div
           className={classix(
             "absolute top-full -z-10 hidden h-screen-minus-nav w-full flex-col bg-black/[0.93] px-6 py-6 transition-transform duration-200 sm:flex",
-            showMenu ? "translate-y-0" : "-translate-y-full"
+            showMenu ? "translate-x-0" : "translate-x-full"
           )}>
           <nav className="text-center">
-            <ul className="flex flex-col divide-y divide-shadow-mountain text-xl text-white [&>li]:py-4">
+            <ul className="flex flex-col text-xl text-white [&>li]:border-b [&>li]:py-4 last:[&>li]:border-b-0">
               {main_routes.map((route, i) => (
-                <li key={i}>
-                  <Link href={route.path}>{route.label}</Link>
-                </li>
+                <MobileLink route={route} key={i} />
               ))}
               {side_routes.map((route, i) => (
-                <li key={i}>
-                  <Link href={route.path}>{route.label}</Link>
-                </li>
+                <MobileLink route={route} key={i} />
               ))}
               {invalid_routes.map((route, i) => (
                 <li key={i} className=" text-tin">
@@ -98,7 +98,7 @@ function Layout({ children, className }: { children: ReactNode; className?: stri
   );
 }
 
-function MyLink({ className, route }: { className?: string; route: LinkProp }) {
+function DesktopLink({ className, route }: { className?: string; route: LinkProp }) {
   const router = useRouter();
 
   return (
@@ -112,6 +112,20 @@ function MyLink({ className, route }: { className?: string; route: LinkProp }) {
           route.path === router.pathname && "h-[3px]"
         )}
       />
+    </li>
+  );
+}
+
+function MobileLink({ route }: { route: LinkProp }) {
+  const router = useRouter();
+  return (
+    <li
+      className={cx(
+        route.path === router.pathname
+          ? "border-b-light-red bg-naga-morich/20"
+          : "border-b-shadow-mountain"
+      )}>
+      <Link href={route.path}>{route.label}</Link>
     </li>
   );
 }

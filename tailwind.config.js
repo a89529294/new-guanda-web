@@ -20,6 +20,7 @@ module.exports = {
         "bright-light-green": "#2AFD58",
         button: "rgba(67,66,66,0.7)",
         "button-hover": "rgba(113,111,111,0.7)",
+        "naga-morich": "#C7000B",
       },
       height: {
         screen: "calc(var(--vh) * 100)",

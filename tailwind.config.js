@@ -41,6 +41,13 @@ module.exports = {
       fontFamily: {
         sans: ["Noto Sans TC", ...defaultTheme.fontFamily.sans],
       },
+      opacity: {
+        15: 0.15,
+      },
+      spacing: {
+        68: "17rem",
+        100: "25rem",
+      },
     },
     screens: {
       xl: { max: "1279px" },

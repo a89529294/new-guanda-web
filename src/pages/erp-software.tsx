@@ -21,12 +21,15 @@ import func3 from "src/assets/erp-software/app-func-3.webp";
 import func4 from "src/assets/erp-software/app-func-4.webp";
 import func5 from "src/assets/erp-software/app-func-5.webp";
 import func6 from "src/assets/erp-software/app-func-6.webp";
+import BackgroundFadedLogo from "src/components/BackgroundFadedLogo";
 
 function ErpSoftware() {
   return (
     <div className="relative isolate grid gap-32 bg-aswad-black pt-44 pb-32 sm:bg-black sm:p-0">
       <BackgroundTriangle />
-      <div className="grid justify-items-center gap-14 justify-self-center text-white sm:px-7 sm:pt-12 sm:pb-18">
+      <BackgroundFadedLogo className="top-48 -left-48 sm:hidden" />
+      <BackgroundFadedLogo className="top-1/2 -right-100 -translate-y-32 sm:hidden" />
+      <div className="sm:pb-18 grid justify-items-center gap-14 justify-self-center text-white sm:px-7 sm:pt-12">
         <UnderscoredText size="sm">鋼結構導入大數據、人員數據化！</UnderscoredText>
         <div className="grid grid-cols-3 place-items-center gap-x-16 sm:gap-x-7">
           <Image

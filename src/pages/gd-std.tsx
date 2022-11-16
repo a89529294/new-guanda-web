@@ -18,13 +18,17 @@ import Spec from "src/components/gd-std/Spec";
 import Advantages from "src/components/gd-std/Advantages";
 import Patents from "src/components/gd-std/Patents";
 import Footer from "src/components/Footer";
+import BackgroundFadedLogo from "src/components/BackgroundFadedLogo";
 
 // TODO add background logos
 function Gdtsd() {
   return (
     <div className="relative isolate bg-aswad-black pt-40 pb-36 sm:bg-black sm:px-8 sm:pt-14 sm:pb-8">
       <BackgroundTriangles />
-      <Image src={hero} alt="machine" priority className="mx-auto w-2/5 sm:w-3/5" />
+      <BackgroundFadedLogo className="top-48 -left-48 -z-10 sm:top-48 sm:-left-16" />
+      <BackgroundFadedLogo className="top-1/4 -right-100 -z-10 -translate-y-1/2 sm:hidden" />
+
+      <Image src={hero} alt="machine" priority className="mx-auto w-1/3 sm:w-3/5" />
       <div className="mb-12 mt-16 flex gap-6 px-10 sm:my-9 sm:flex-col sm:px-0">
         <Image src={heroSub1} alt="" />
         <Image src={heroSub2} alt="" />
@@ -70,9 +74,10 @@ function Gdtsd() {
           className="mt-28 sm:mt-0"
         />
       </div>
-      <div className="ml-32 mr-48 flex items-start gap-28 sm:m-0 sm:flex-col sm:gap-2">
-        <Image src={hero} alt="" className="w-64 flex-1 self-end sm:flex-initial" />
+      <div className="relative ml-32 mr-48 flex items-start gap-28 sm:m-0 sm:flex-col sm:gap-2">
+        <Image src={hero} alt="" className="w-64 flex-1 sm:self-end" />
         <Spec />
+        <BackgroundFadedLogo className="-left-80 -top-44  -z-10 sm:-top-16 sm:-left-28" />
       </div>
       <Advantages />
       <Patents />

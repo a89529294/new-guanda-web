@@ -10,15 +10,17 @@ function ImageWithCard({
   desc,
   path,
   imgPos,
+  className,
 }: {
   img: StaticImageData;
   title: string;
   desc: string;
   path: string;
   imgPos: "left" | "right";
+  className?: string;
 }) {
   return (
-    <div className="flex items-start sm:h-screen-minus-nav sm:flex-col sm:gap-10">
+    <div className={cx("flex items-start sm:h-screen-minus-nav sm:flex-col sm:gap-10", className)}>
       <Image
         src={img}
         alt=""

@@ -14,18 +14,19 @@ import importance_1_3 from "src/assets/qrcode-metal-plate/importance-1-3.jpg";
 import doubleDownArrows from "src/assets/qrcode-metal-plate/double-downwards-arrows.svg";
 import doubleUpArrows from "src/assets/qrcode-metal-plate/double-upwards-arrows.svg";
 import Footer from "src/components/Footer";
+import BackgroundFadedLogo from "src/components/BackgroundFadedLogo";
 
 function QRCodeMetalPlate() {
   return (
     <div className="relative isolate bg-aswad-black sm:bg-black ">
       <BackgroundTriangle />
-
+      <BackgroundFadedLogo className="top-48 -left-48 sm:hidden" />
       <QRCodePlate
         size="lg"
         className="top-60 mx-auto mb-96 grid w-fit place-items-center sm:mb-80 sm:translate-x-10"
       />
 
-      <section className="bg-chaos-black px-14 pt-20 pb-28 sm:px-0 sm:py-10 ">
+      <section className="relative z-10 bg-chaos-black px-14 pt-20 pb-28 sm:px-0 sm:py-10">
         <SandwitchedText fontSize="lg">構件標記的重要性（一）</SandwitchedText>
         <h3 className="before-white-square after-white-square relative mx-auto mt-20 mb-5 w-fit text-3xl font-bold text-white sm:mt-11 sm:text-xl">
           鋼構構件的標記方法

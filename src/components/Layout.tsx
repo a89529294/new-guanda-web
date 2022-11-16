@@ -29,7 +29,7 @@ function Layout({ children, className }: { children: ReactNode; className?: stri
   }, [router]);
 
   return (
-    <div className={cx("relative pt-[var(--nav-height)]", className)}>
+    <div className={cx("relative overflow-x-hidden pt-[var(--nav-height)]", className)}>
       <nav className="fixed top-0 z-10 flex h-nav w-full bg-aswad-black">
         <div className="flex w-56 items-center bg-aswad-black pl-14 sm:w-48 sm:pl-7">
           <Image

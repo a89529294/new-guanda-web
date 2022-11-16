@@ -36,9 +36,9 @@ function aboutUs() {
         </p>
       </div>
       <div className="col-span-2 col-start-2 row-start-3 grid grid-cols-2 gap-5 sm:col-span-1 sm:col-start-1 sm:grid-cols-1">
-        <Image src={tm1} alt="trade mark 1" />
-        <Image src={tm2} alt="trade mark 2" />
         <Image src={tm4} alt="trade mark 4" />
+        <Image src={tm2} alt="trade mark 2" />
+        <Image src={tm1} alt="trade mark 1" />
         <Image src={tm5} alt="trade mark 5" />
       </div>
       <Footer />

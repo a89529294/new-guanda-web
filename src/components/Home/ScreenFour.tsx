@@ -8,7 +8,7 @@ import GreenCircle from "../GreenCircle";
 import circleApp from "src/assets/circle-app.svg";
 import circleGdErp from "src/assets/circle-gd-erp.svg";
 import circleQr from "src/assets/circle-qr.svg";
-import erp from "src/assets/index-erp-hd.png";
+import erp from "src/assets/index-erp.jpg";
 
 function ScreenFour({ myRef }: { myRef?: RefObject<HTMLDivElement> }) {
   return (

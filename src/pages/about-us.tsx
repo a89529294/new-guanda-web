@@ -5,10 +5,9 @@ import Footer from "src/components/Footer";
 import BackgroundTriangles from "src/components/BackgroundTriangles";
 import UnderscoredText from "src/components/UnderscoredText";
 
-import logoAboutUs from "src/assets/logo_about_us.png";
+import logoAboutUs from "src/assets/logo_about_us.webp";
 import tm1 from "src/assets/about-us/trademark1.jpg";
 import tm2 from "src/assets/about-us/trademark2.jpg";
-import tm3 from "src/assets/about-us/trademark3.jpg";
 import tm4 from "src/assets/about-us/trademark4.jpg";
 import tm5 from "src/assets/about-us/trademark5.jpg";
 import BackgroundFadedLogo from "src/components/BackgroundFadedLogo";

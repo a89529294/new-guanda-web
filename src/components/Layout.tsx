@@ -97,7 +97,9 @@ function Layout({ children, className }: { children: ReactNode; className?: stri
           </nav>
           <footer className="mt-auto grid grid-cols-[auto_1fr] gap-x-2.5 gap-y-5 text-white">
             <Image src={work} alt="bag" className="self-center" />
-            <span>工作機會</span>
+            <a href="https://www.104.com.tw/company/1a2x6bm3kg" target="_blank" rel="noreferrer">
+              工作機會
+            </a>
             <Image src={location} alt="location" className="place-self-center" />
             <span>台中市烏日區溪福路一巷110弄105-9號</span>
           </footer>

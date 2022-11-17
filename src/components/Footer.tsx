@@ -14,25 +14,22 @@ function Footer() {
       <Image src={logoCN} alt="logo" width={160} className="" />
       <Image src={logo} alt="logo" className="hidden" />
       <nav className="ml-auto flex gap-14">
-        <NavItem label="工作機會" image={work} hideOnMobile />
-        <NavItem label="聯絡我們" image={phone} hideOnMobile />
+        <NavItem label="工作機會" image={work} link="https://www.104.com.tw/company/1a2x6bm3kg" />
+        <NavItem label="聯絡我們" image={phone} />
         <NavItem label="台中市烏日區溪福路一巷110弄105-9號" image={location} />
       </nav>
     </div>
   );
 }
 
-function NavItem({
-  label,
-  image,
-  hideOnMobile,
-}: {
-  label: string;
-  image: any;
-  hideOnMobile?: boolean;
-}) {
-  return (
-    <div className={cx("flex gap-1.5 ", hideOnMobile && "")}>
+function NavItem({ label, image, link }: { label: string; image: any; link?: string }) {
+  return link ? (
+    <a href={link} target="_blank" rel="noreferrer" className="flex gap-1.5 whitespace-nowrap">
+      <Image src={image} alt="decoration" className="h-full w-auto" />
+      {label}
+    </a>
+  ) : (
+    <div className="flex gap-1.5 ">
       <Image src={image} alt="decoration" className="h-full w-auto" />
       <h3 className="whitespace-nowrap">{label}</h3>
     </div>

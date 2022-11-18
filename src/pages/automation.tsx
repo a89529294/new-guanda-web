@@ -3,8 +3,8 @@ import Image from "next/image";
 
 import ImageWithCard from "src/components/automation/ImageWithCard";
 
-import alt1 from "src/assets/automation/alt1.jpg";
-import alt2 from "src/assets/automation/alt2.jpg";
+import alt1 from "src/assets/automation/alt1.webp";
+import alt2 from "src/assets/automation/alt2.webp";
 import hero from "src/assets/automation/automation-hero.webp";
 import ImageSwitcher from "src/components/automation/ImageSwitcher";
 import Footer from "src/components/Footer";

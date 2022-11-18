@@ -2,10 +2,10 @@ import cx from "classix";
 import React, { useState } from "react";
 import Image from "next/image";
 
-import switch1 from "src/assets/automation/switch1-new.webp";
-import switch2 from "src/assets/automation/switch2-new.webp";
-import switch3 from "src/assets/automation/switch3-new.webp";
-import switch4 from "src/assets/automation/switch4-new.webp";
+import switch1 from "src/assets/automation/switch1.webp";
+import switch2 from "src/assets/automation/switch2.webp";
+import switch3 from "src/assets/automation/switch3.webp";
+import switch4 from "src/assets/automation/switch4.webp";
 
 function ImageSwitcher() {
   const [selectedIdx, selectIdx] = useState(0);

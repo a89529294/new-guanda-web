@@ -6,7 +6,7 @@ import Card from "src/components/Card";
 import BorderedImageWithDesc from "src/components/gd-std/BorderedImageWithDesc";
 import ImageWithCard from "src/components/gd-std/ImageWithCard";
 
-import hero from "src/assets/gd-std/hero.webp";
+import hero from "src/assets/gd-std/hero-new.webp";
 import heroSub1 from "src/assets/gd-std/hero-sub-1.jpg";
 import heroSub2 from "src/assets/gd-std/hero-sub-2.jpg";
 import alt1 from "src/assets/gd-std/alt-1.jpg";
